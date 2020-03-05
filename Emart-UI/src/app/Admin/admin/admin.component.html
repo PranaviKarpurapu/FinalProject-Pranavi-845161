@@ -1,0 +1,41 @@
+<div calss="b1">
+    
+    <div class="topnav">
+       <a> <div class="round-shape" id="i1"> <img class="round-shape" src="src/assets/image/df.jpg" /> </div></a>
+       <a [routerLink]="['/admin/view-categories']" id="r"><i class="fa fa-fw fa-user"></i>View Categories</a>
+       <a [routerLink]="['/admin/view-sub-categories']" id="r" ><i class="fa fa-fw fa-user"></i>View SubCategories</a>
+      
+       <a [routerLink]="['/admin/add-sub-category']" id="r" ><i class="fa fa-fw fa-user"></i>Add SubCategories</a>
+       <a [routerLink]="['/admin/add-category']" id="r" ><i class="fa fa-fw fa-user"></i>Add Categories</a>
+  
+       
+        <a [routerLink]="['/admin']" id="r"><i class="fa fa-fw fa-phone"></i>Contact</a>
+        <a [routerLink]="['/admin']" id="r" ><i class="fa fa-fw fa-user"></i>About Us</a>
+        <a class="active"  [routerLink]="['/admin']" id="r"><i class="fa fa-fw fa-home" ></i>Home</a>
+        
+  
+  </div>
+  
+  <div class="row">
+    <br>
+     <br>
+  </div>
+  
+  <div class="container-fluid">
+        
+  
+  <div class="row">
+    <div class="col-lg-7">
+       
+      </div>
+    
+
+  <div class="col-lg-5">
+      
+  <router-outlet></router-outlet>  
+    </div>  
+  
+  
+  </div>
+  </div>
+  </div>

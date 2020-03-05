@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMart.AccountService", "EMart.AccountService\EMart.AccountService.csproj", "{D86C817F-01BF-48BF-B690-AA372BD9781F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMart.BuyerService", "EMart.BuyerService\EMart.BuyerService.csproj", "{38413ADD-2AF0-4792-9546-45634D84969C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMart.SellerService", "EMart.SellerService\EMart.SellerService.csproj", "{B0715C00-579C-4ED4-9A2C-C2E0AFC34F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMart.AdminService", "EMart.AdminService\EMart.AdminService.csproj", "{6E71805C-8D79-46AD-B439-38A75B475A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMart.Gateway", "EMart.Gateway\EMart.Gateway.csproj", "{67A5868D-906B-451D-9E42-2F33D1D9B113}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D86C817F-01BF-48BF-B690-AA372BD9781F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86C817F-01BF-48BF-B690-AA372BD9781F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86C817F-01BF-48BF-B690-AA372BD9781F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86C817F-01BF-48BF-B690-AA372BD9781F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38413ADD-2AF0-4792-9546-45634D84969C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38413ADD-2AF0-4792-9546-45634D84969C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38413ADD-2AF0-4792-9546-45634D84969C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38413ADD-2AF0-4792-9546-45634D84969C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0715C00-579C-4ED4-9A2C-C2E0AFC34F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0715C00-579C-4ED4-9A2C-C2E0AFC34F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0715C00-579C-4ED4-9A2C-C2E0AFC34F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0715C00-579C-4ED4-9A2C-C2E0AFC34F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E71805C-8D79-46AD-B439-38A75B475A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E71805C-8D79-46AD-B439-38A75B475A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E71805C-8D79-46AD-B439-38A75B475A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E71805C-8D79-46AD-B439-38A75B475A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A5868D-906B-451D-9E42-2F33D1D9B113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A5868D-906B-451D-9E42-2F33D1D9B113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A5868D-906B-451D-9E42-2F33D1D9B113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A5868D-906B-451D-9E42-2F33D1D9B113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF1411EA-621E-4A80-BD19-CF2433C32439}
+	EndGlobalSection
+EndGlobal
