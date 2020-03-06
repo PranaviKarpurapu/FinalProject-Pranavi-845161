@@ -1,3 +1,6 @@
+
+
+
 * {box-sizing: border-box;}
 
 body {
@@ -108,7 +111,7 @@ body {
 }
 @media screen and (max-width: 700px) {
     .sidenav {
-      width: 100%;
+      width: 70%;
       height: auto;
       position: relative;
     }
@@ -123,15 +126,3 @@ body {
       float: none;
     }
   }
-
-  #home
-  {
- background-image: url("src/assets/image/df.jpg");  
- background-size: cover;
- height:620px;
- position: relative;
-
-  }
-
-
-  

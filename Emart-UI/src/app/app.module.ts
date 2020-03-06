@@ -28,7 +28,7 @@ import { ViewbuyerprofileComponent } from './Buyer/viewbuyerprofile/viewbuyerpro
 import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
 import { HomeComponent } from './Account/home/home.component';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { AccountService } from './Services/account.service';
 import { AdminService } from './Services/admin.service';
 import { ViewCategoriesComponent } from './Admin/view-categories/view-categories.component';
@@ -68,7 +68,8 @@ import { ViewSubCategoriesComponent } from './Admin/view-sub-categories/view-sub
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    FormsModule
   ],
   providers: [AccountService,AdminService],
   bootstrap: [AppComponent]
