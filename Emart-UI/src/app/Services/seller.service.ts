@@ -4,6 +4,7 @@ import{Observable} from "Rxjs";
 import { Items } from '../Model/items';
 import { Category } from '../Model/category';
 import { SubCategory } from '../Model/sub-category';
+import { Seller } from '../Model/seller';
 
 
 
@@ -14,6 +15,7 @@ const Requestheaders={headers:new HttpHeaders({'content-Type':'application/json'
 export class SellerService {
 
   url:string='http://localhost:55179/Item/'
+  url1:string='http://localhost:55179/Seller/'
   constructor(private http:HttpClient) { }
 
   public AddItem(item:Items):Observable<any>
@@ -50,6 +52,10 @@ public GetItem(id:string) : Observable<Items>
   return this.http.get<Items>(this.url+'GetItem/'+id,Requestheaders)
 }
 
+public ViewProfile(sid:string):Observable<Seller>
+  {
+    return this.http.get<Seller>(this.url1+'ViewProfile/'+sid,Requestheaders);
+  }
 
 
 }

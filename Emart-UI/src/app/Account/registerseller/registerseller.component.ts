@@ -65,16 +65,16 @@ export class RegistersellerComponent implements OnInit {
     {
 
       this.seller=new Seller();
-      this.seller.SellerId=this.registerForm.value["SellerId"];
-      this.seller.UserName=this.registerForm.value["UserName"];
-      this.seller.MobileNo=(this.registerForm.value["MobileNo"]);
-      this.seller.EmailId=this.registerForm.value["EmailId"];
-      this.seller.GSTIN=this.registerForm.value["GSTIN"];
-      this.seller.Password=this.registerForm.value["Password"];
-      this.seller.PostalAddress=this.registerForm.value["PostalAddress"];
-      this.seller.Website=this.registerForm.value["Website"];
-      this.seller.CompanyName=this.registerForm.value["CompanyName"];
-      this.seller.BriefDetails=this.registerForm.value["BriefDetails"];
+      this.seller.sellerId=this.registerForm.value["SellerId"];
+      this.seller.userName=this.registerForm.value["UserName"];
+      this.seller.mobileNo=(this.registerForm.value["MobileNo"]);
+      this.seller.emailId=this.registerForm.value["EmailId"];
+      this.seller.gstin=this.registerForm.value["GSTIN"];
+      this.seller.password=this.registerForm.value["Password"];
+      this.seller.postalAddress=this.registerForm.value["PostalAddress"];
+      this.seller.website=this.registerForm.value["Website"];
+      this.seller.companyName=this.registerForm.value["CompanyName"];
+      this.seller.briefDetails=this.registerForm.value["BriefDetails"];
       this.service.RegisterSeller(this.seller).subscribe
       (
         res=>

@@ -36,6 +36,7 @@ import { ViewSubCategoriesComponent } from './Admin/view-sub-categories/view-sub
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { ViewSubCategoriesComponent } from './Admin/view-sub-categories/view-sub
     ViewsellerprofileComponent,
     HomeComponent,
     ViewCategoriesComponent,
-    ViewSubCategoriesComponent
+    ViewSubCategoriesComponent,
+    
   ],
   imports: [
     BrowserModule,

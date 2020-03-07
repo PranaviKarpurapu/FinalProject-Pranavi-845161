@@ -27,8 +27,11 @@ import { ViewCategoriesComponent } from './Admin/view-categories/view-categories
 import { ViewSubCategoriesComponent } from './Admin/view-sub-categories/view-sub-categories.component';
 
 
+
+
 const routes: Routes = [
 
+  
 {path:'buyer',component:BuyerComponent,children:
 [
  {path:'search',component:SearchComponent},
@@ -36,6 +39,7 @@ const routes: Routes = [
  { path:'purchase-history',component:PurchaseHistoryComponent},
  { path:'buy-product',component:BuyProductComponent},
  { path:'viewbuyerprofile',component:ViewbuyerprofileComponent},
+
 ]},
 
 {path:'seller',component:SellerComponent,children:
@@ -44,6 +48,7 @@ const routes: Routes = [
   {path:'view-items',component:ViewItemsComponent},
   {path:'viewsellerprofile',component:ViewsellerprofileComponent},
   {path:'view-reports',component:ViewReportsComponent},
+
 ]},
 
 {path:'admin',component:AdminComponent,children:

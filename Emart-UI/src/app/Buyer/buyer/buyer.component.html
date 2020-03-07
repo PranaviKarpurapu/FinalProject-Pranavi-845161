@@ -5,7 +5,7 @@
         <a class="active"  [routerLink]="['/buyer']" ><i class="fa fa-fw fa-home"></i>Home</a>
         <a [routerLink]="['/buyer']"><i class="fa fa-fw fa-user"></i>ViewProfile</a>
         <a [routerLink]="['/buyer']"><i class="fa fa-fw fa-phone"></i>Contact</a>
-        <a [routerLink]="['/buyer']" id="l" ><i class="fa fa-fw fa-user"></i>logout</a>
+        <a (click)="Logout()" id="l" ><i class="fa fa-fw fa-user"></i>logout</a>
         <a [routerLink]="['/buyer/search']" id="l" ><span class="glyphicon glyphicon-search"></span>Search</a>
         <!-- <div class="search-container">
         
