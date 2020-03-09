@@ -8,7 +8,6 @@ namespace EMart.BuyerService.Repositories
 {
     public interface IBuyerRepository
     {
-
         List<Items> SearchItems(string name);
 
         void BuyItem(TransactionHistory item);
@@ -23,9 +22,9 @@ namespace EMart.BuyerService.Repositories
 
         List<SubCategory> GetSubCategories(string catid);
 
-        void Addtocart(Cart cartobj);
+        public void Addtocart(Cart cartobj);
 
-        void Deletefromcart(string cartid);
+       public void Deletefromcart(string cartid);
 
         List<Cart> ViewCart();
     }
