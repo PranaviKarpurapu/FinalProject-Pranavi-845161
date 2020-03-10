@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TransactionHistory } from 'src/app/Model/transaction-history';
+import { FormBuilder } from '@angular/forms';
+import { BuyerService } from 'src/app/Services/buyer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-history',
@@ -6,8 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./purchase-history.component.css']
 })
 export class PurchaseHistoryComponent implements OnInit {
-
-  constructor() { }
+  buyerid:string;
+  transobj:TransactionHistory;
+  translist:TransactionHistory[];
+  constructor(private builder:FormBuilder,private service:BuyerService,private route:Router)
+   { 
+    this.buyerid= localStorage.getItem('buyerId');
+    this.service.PurchaseHistory(this.buyerid).subscribe(res=>
+      {
+        this.transobj=res;
+        console.log(this.transobj)
+      },
+      err=>{
+        console.log(err);
+      })
+   }
 
   ngOnInit() {
   }

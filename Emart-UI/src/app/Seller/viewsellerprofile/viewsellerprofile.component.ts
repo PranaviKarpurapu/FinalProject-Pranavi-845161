@@ -82,6 +82,34 @@ onReset()
 this.submitted=false;
 this.itemForm.reset();
 }
+
+
+
+
+
+
+EditProfile()
+{
+  this.seller=new Seller();
+  console.log(this.seller);
+  this.seller.sellerId=localStorage.getItem('sellerid');
+  this.seller.userName=this.itemForm.value["userName"];
+  this.seller.password=this.itemForm.value["password"];
+  this.seller.emailId=this.itemForm.value["emailId"];
+  this.seller.mobileNo=this.itemForm.value["mobileNo"];
+  this.seller.companyName=this.itemForm.value["companyName"];
+  this.seller.gstin=this.itemForm.value["gstin"];
+  this.seller.briefDetails=this.itemForm.value["briefDetails"];
+  this.seller.postalAddress=this.itemForm.value["postalAddress"];
+  this.seller.website=this.itemForm.value["website"];
+// this.item.createdDateTime=this.itemForm.value["createdDateTime"];
+
+  console.log(this.seller);
+  this.service.EditProfile(this.seller).subscribe(res=>
+    {
+      console.log('Record Updated');
+    })
 }
 
+}
 

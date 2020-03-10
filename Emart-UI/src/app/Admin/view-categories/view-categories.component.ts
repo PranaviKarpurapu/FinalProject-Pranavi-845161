@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/Model/category';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AdminService } from 'src/app/Services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-categories',
@@ -14,7 +15,7 @@ export class ViewCategoriesComponent implements OnInit {
   viewcatList:Category[];
   category: Category;
   
-  constructor(private formbuilder:FormBuilder,private service:AdminService) { 
+  constructor(private formbuilder:FormBuilder,private service:AdminService,private route:Router) { 
     
         
   }
@@ -102,6 +103,7 @@ export class ViewCategoriesComponent implements OnInit {
       console.log('Record Deleted');
       alert("Do u want to delete");
       alert("Record Deleted");
+      this.route.navigateByUrl('/admin/view-categories');
     
     },
     err=>
@@ -112,3 +114,8 @@ export class ViewCategoriesComponent implements OnInit {
   this.View(); 
 }
     }
+
+
+
+
+    

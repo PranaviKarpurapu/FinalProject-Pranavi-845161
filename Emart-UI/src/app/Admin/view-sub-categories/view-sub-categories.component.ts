@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from 'src/app/Services/admin.service';
 import { SubCategory } from 'src/app/Model/sub-category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-sub-categories',
@@ -14,7 +15,7 @@ export class ViewSubCategoriesComponent implements OnInit {
 viewsubcategory:SubCategory;
 viewsubcategoryList:SubCategory[];
 
-  constructor(private fromBuilder:FormBuilder,private service:AdminService) { 
+  constructor(private fromBuilder:FormBuilder,private route:Router,private service:AdminService) { 
     
     }
     
@@ -102,6 +103,7 @@ viewsubcategoryList:SubCategory[];
       console.log('Record Deleted');
       alert("Do u want to delete");
       alert("Record Deleted");
+      this.route.navigateByUrl('/admin/view-sub-categories');
     },
     err=>
     {

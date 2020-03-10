@@ -34,15 +34,17 @@ export class BuyProductComponent implements OnInit {
   onSubmit()
   {
     this.pobj=new TransactionHistory();
-    this.pobj.id='T'+Math.round(Math.random()*999);
-    this.pobj.transactionId=this.pobj.id;
+    this.pobj.transactionId='T'+Math.round(Math.random()*999);
     this.pobj.buyerId=localStorage.getItem('buyerId');
     this.pobj.sellerId=this.item.sellerId;
     this.pobj.numberOfItems=this.buyerform.value["numberOfItems"];
     this.pobj.itemId=this.item.itemId;
+    this.pobj.itemname=this.pobj.itemname;
+    this.pobj.image=this.item.image;
     this.pobj.transactionType=this.buyerform.value["transactionType"]
        this.pobj.dateTime=this.buyerform.value["dateTime"];
        this.pobj.remarks=this.buyerform.value["remarks"];
+
        console.log(this.pobj);
        this.service.BuyItem(this.pobj).subscribe(res=>{
          console.log("Purchase was Sucessfull");

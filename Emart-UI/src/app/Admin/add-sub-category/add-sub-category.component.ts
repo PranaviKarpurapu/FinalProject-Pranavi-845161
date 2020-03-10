@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SubCategory } from 'src/app/Model/sub-category';
 import { AdminService } from 'src/app/Services/admin.service';
 import { Category } from 'src/app/Model/category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-sub-category',
@@ -16,7 +17,7 @@ export class AddSubCategoryComponent implements OnInit {
   subcategory:SubCategory;
   subcategorylist:SubCategory[];
   categorylist:Category[];
-  constructor(private fromBuilder:FormBuilder,private service: AdminService) { this.GetCategories(); }
+  constructor(private fromBuilder:FormBuilder,private route:Router,private service: AdminService) { this.GetCategories(); }
 
 
 
@@ -89,6 +90,7 @@ export class AddSubCategoryComponent implements OnInit {
         {
           console.log(this.subcategory)
           console.log('Record Added');
+          this.route.navigateByUrl('/admin/view-sub-categories');
         },
         err=>
         {

@@ -83,6 +83,11 @@ namespace EMart.BuyerService.Models
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
+                entity.Property(e => e.BuyerId)
+                    .HasColumnName("buyerId")
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.CategoryId)
                     .IsRequired()
                     .HasColumnName("categoryId")
@@ -135,29 +140,34 @@ namespace EMart.BuyerService.Models
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
+                entity.HasOne(d => d.Buyer)
+                    .WithMany(p => p.Cart)
+                    .HasForeignKey(d => d.BuyerId)
+                    .HasConstraintName("FK__Cart__buyerId__5CD6CB2B");
+
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__categoryId__49C3F6B7");
+                    .HasConstraintName("FK__Cart__categoryId__5DCAEF64");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__itemId__4CA06362");
+                    .HasConstraintName("FK__Cart__itemId__60A75C0F");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.SellerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__sellerId__4BAC3F29");
+                    .HasConstraintName("FK__Cart__sellerId__5FB337D6");
 
                 entity.HasOne(d => d.Subcategory)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.SubcategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__subcategor__4AB81AF0");
+                    .HasConstraintName("FK__Cart__subcategor__5EBF139D");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -375,12 +385,11 @@ namespace EMart.BuyerService.Models
 
             modelBuilder.Entity<TransactionHistory>(entity =>
             {
-                entity.HasIndex(e => e.TransactionId)
-                    .HasName("UQ__Transact__55433A6A7D64FE9E")
-                    .IsUnique();
+                entity.HasKey(e => e.TransactionId)
+                    .HasName("PK__Transact__55433A6BD460C277");
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(5)
+                entity.Property(e => e.TransactionId)
+                    .HasMaxLength(10)
                     .IsUnicode(false);
 
                 entity.Property(e => e.BuyerId)
@@ -399,15 +408,10 @@ namespace EMart.BuyerService.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Remarks)
-                    .HasMaxLength(20)
+                    .HasMaxLength(70)
                     .IsUnicode(false);
 
                 entity.Property(e => e.SellerId)
-                    .HasMaxLength(5)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.TransactionId)
-                    .IsRequired()
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
@@ -419,17 +423,17 @@ namespace EMart.BuyerService.Models
                 entity.HasOne(d => d.Buyer)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.BuyerId)
-                    .HasConstraintName("FK__Transacti__Buyer__3C69FB99");
+                    .HasConstraintName("FK__Transacti__Buyer__66603565");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.ItemId)
-                    .HasConstraintName("FK__Transacti__ItemI__3E52440B");
+                    .HasConstraintName("FK__Transacti__ItemI__68487DD7");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.SellerId)
-                    .HasConstraintName("FK__Transacti__Selle__3D5E1FD2");
+                    .HasConstraintName("FK__Transacti__Selle__6754599E");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -57,5 +57,9 @@ public ViewProfile(sid:string):Observable<Seller>
     return this.http.get<Seller>(this.url1+'ViewProfile/'+sid,Requestheaders);
   }
 
-
+  public EditProfile(seller:Seller) : Observable<any>
+  {
+    return this.http.put<any>(this.url1+'EditProfile',JSON.stringify(seller),Requestheaders)
+  }
+  
 }

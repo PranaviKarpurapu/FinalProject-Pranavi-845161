@@ -1,53 +1,64 @@
-<!-- <form [formGroup]="itemForm" >
-    <div class="container py-5">  
-      <h3 class="text-center text-uppercase">Purchase History</h3>  
-      <table class="table table-bordered table-striped">  
-          <thead>  
-              <tr class="text-center text-uppercase">  
-                  
-                  <th>SellerId</th> 
-                  <th>CategoryId</th> 
-                  
-                  <th>SubcategoryId</th>
-                  <th>ItemID</th>  
-                  <th>ItemName</th>  
-                  <th>Image</th>  
-                  <th>Description</th> 
-                  <th>Price</th>   
-                  <th>StockNumber</th>  
-                
+<br><br><br><br><br>
+<div class="container">
+    <br/> 
+   <table class="table table-bordered">
+     <tr >
+      <th>Transaction ID</th>
+       <th>ItemI Name </th>
+       <th>Number Of Items</th>
+      
+       <th>Transaction Type</th>
+       <th>Ordered Date</th>
+       
+     </tr>
+     <tr *ngFor="let item of transobj" >
+      <td>{{item.transactionId}}</td>
+       <td>{{item.itemName}}</td>
+       <td>{{item.numberOfItems}}</td>
+       
+       <td>{{item.transactionType}}</td>
+       <td>{{item.dateTime}}</td>   
+      
+     </tr>
+   </table>
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <br><br><br>
+<p>Transaction History</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let item of transobj">
+          <div class="card">
+            <h5 class="card-title">{{item.itemname}}</h5>
+             <img class="card-img " id="i1" src="assets/image/{{item.image}}" alt="Card image cap"> 
+              <div class="card-body" > -->
+                <!-- ItemId:{{item.itemId}}<br/>
+                CategoryId:{{item
+                    .categoryId}}<br/>
+                SubCategoryId:{{item.subcategoryId}}<br/>
+                 SellerId: {{item.sellerId}}<br/> -->
+                 <!-- Price: {{item.price}}<br/>
+                  Description:{{item.description}}<br/>
                     
-                  <th>Remarks</th> 
-                 
-              </tr>  
-          </thead>  
-          <tbody>  
-            <tr *ngFor="let item of itemlist"> 
-              <td>{{item.sellerId}}</td>  
-              <td>{{item.categoryId}}</td> 
-              <td>{{item.subcategoryId}}</td> 
-              <td>{{item.itemId}}</td>  
-              <td>{{item.itemName}}</td> 
-              <td>{{item.image}}</td> 
-              <td>{{item.description}}</td>
-              <td>{{item.price}}</td>  
+            </div>
                 
-              <td>{{item.stockNumber}}</td> 
-          
-           
-              
-                
-              <td>{{item.remarks}}</td>  
-              <td> <button class='btn btn-danger' (click)="DeleteItem(item.itemId)">Delete</button> </td>
-              <!-- <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"(click)="UpdateItem()">Edit</button></td>
-               -->
-              <!-- <td><button class="btn btn-primary btn-lg  mr-1" (click)="GetItem(item.itemId)" data-toggle="modal" data-target="#myModal">Edit</button></td>
-              
-            </tr>  
-          </tbody>  
-        </table>  
-      </div>  
-    </form>
-  
-  
-      -->
+          </div>
+          <br>
+        </div>
+      </div>
+    </div> -->
+

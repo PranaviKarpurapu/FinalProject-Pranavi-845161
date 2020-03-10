@@ -30,10 +30,10 @@ namespace EMart.Test
         {
             _brepo.BuyItem(new TransactionHistory()
             {
-                Id = "1",
+                
                 BuyerId = "B054",
                 SellerId = "1",
-                TransactionId = "1",
+                TransactionId = "4",
                 ItemId = "I266",
                 NumberOfItems = "2",
                 DateTime = DateTime.Now,
@@ -98,18 +98,19 @@ namespace EMart.Test
             _brepo.Addtocart(new Cart()
             {
                 CartId = "CT2",
+                BuyerId="5",
                 CategoryId = "1",
                 SubcategoryId = "SC11",
                 SellerId = "1",
-                ItemId = "I853",
-                Itemname = "Charger",
+                ItemId = "I772",
+                Itemname = "Redmi",
                 Price = "I853",
                 Description = "Black in color",
                 Remarks = "Fast in charging",
                 Image = "electronic2.jpg"
             });
 
-            var result = _brepo.ViewCart();
+            var result = _brepo.ViewCart("5");
             Assert.IsNotNull(result);
         }
 
@@ -118,7 +119,7 @@ namespace EMart.Test
         public void TestDeletefromcart()
         {
             _brepo.Deletefromcart("CT2");
-            var result = _brepo.ViewCart();
+            var result = _brepo.ViewCart("5");
 
             Assert.IsNotNull(result);
         }

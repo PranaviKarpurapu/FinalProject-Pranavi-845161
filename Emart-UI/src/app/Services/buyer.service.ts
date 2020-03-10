@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Items } from '../Model/items';
 import { TransactionHistory } from '../Model/transaction-history';
 import { Cart } from '../Model/cart';
+import { Buyer } from '../Model/buyer';
 
 const Requestheaders={headers:new HttpHeaders(
   {'content-Type':'application/json',
@@ -32,9 +33,9 @@ export class BuyerService {
     return this.http.post<TransactionHistory>(this.url+'BuyItem/',item,Requestheaders)
   }
 
-  public ViewCart() :Observable<Cart>
+  public ViewCart(buyerid:string) :Observable<Cart>
   {
-    return this.http.get<Cart>(this.url+'ViewCart',Requestheaders);
+    return this.http.get<Cart>(this.url+'ViewCart/'+buyerid,Requestheaders);
    }
 
    public Addtocart(cartobj:Cart) :Observable<Cart>
@@ -47,6 +48,20 @@ export class BuyerService {
     return this.http.delete<Cart>(this.url+'Deletefromcart/'+cartid,Requestheaders);
    }
 
+   public PurchaseHistory(buyerid:string) :Observable<TransactionHistory>
+  {
+    return this.http.get<TransactionHistory>(this.url+'TransactionHistory/'+buyerid,Requestheaders);
+   }
+
+   public EditProfile(buyer:Buyer) : Observable<any>
+   {
+     return this.http.put<any>(this.url+'EditProfile',JSON.stringify(buyer),Requestheaders)
+   }
+
+   public ViewProfile(id:string) : Observable<Buyer>
+   {
+     return this.http.get<Buyer>(this.url+'ViewProfile/'+id,Requestheaders)
+   }
 
 }
 

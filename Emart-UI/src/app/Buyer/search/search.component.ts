@@ -48,6 +48,7 @@ Add(item:Items)
 {
 this.cartobj=new Cart();
 this.cartobj.cartId='CT'+Math.round(Math.random()*999);
+this.cartobj.buyerId=localStorage.getItem('buyerId');
 this.cartobj.sellerId=item.sellerId;
 this.cartobj.categoryId=item.categoryId;
 this.cartobj.subcategoryId=item.subcategoryId;
@@ -56,11 +57,12 @@ this.cartobj.itemId=item.itemId;
 this.cartobj.itemname=item.itemName;
 this.cartobj.price=item.price;
 this.cartobj.description=item.description;
-this.cartobj.remarks=item.remarks;
+
 console.log(this.cartobj);
      this.service.Addtocart(this.cartobj).subscribe(
        res=>{
        console.log("Added to cart");
+       console.log(this.cartobj);
        alert('Added to cart');
      },
      err=>

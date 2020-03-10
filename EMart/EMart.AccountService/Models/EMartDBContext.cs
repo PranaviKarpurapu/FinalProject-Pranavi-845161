@@ -80,7 +80,12 @@ namespace EMart.AccountService.Models
             {
                 entity.Property(e => e.CartId)
                     .HasColumnName("cartId")
-                    .HasMaxLength(10)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.BuyerId)
+                    .HasColumnName("buyerId")
+                    .HasMaxLength(5)
                     .IsUnicode(false);
 
                 entity.Property(e => e.CategoryId)
@@ -95,9 +100,8 @@ namespace EMart.AccountService.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Image)
-                    .IsRequired()
                     .HasColumnName("image")
-                    .HasMaxLength(50)
+                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ItemId)
@@ -107,19 +111,12 @@ namespace EMart.AccountService.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Itemname)
-                    .IsRequired()
                     .HasColumnName("itemname")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Price)
-                    .IsRequired()
-                    .HasColumnName("price")
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Remarks)
-                    .HasColumnName("remarks")
+                entity.Property(e => e.Price)
+                    .HasColumnName("price")
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
@@ -135,29 +132,34 @@ namespace EMart.AccountService.Models
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
+                entity.HasOne(d => d.Buyer)
+                    .WithMany(p => p.Cart)
+                    .HasForeignKey(d => d.BuyerId)
+                    .HasConstraintName("FK__Cart__buyerId__74AE54BC");
+
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__categoryId__49C3F6B7");
+                    .HasConstraintName("FK__Cart__categoryId__75A278F5");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.ItemId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__itemId__4CA06362");
+                    .HasConstraintName("FK__Cart__itemId__787EE5A0");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.SellerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__sellerId__4BAC3F29");
+                    .HasConstraintName("FK__Cart__sellerId__778AC167");
 
                 entity.HasOne(d => d.Subcategory)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.SubcategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Cart__subcategor__4AB81AF0");
+                    .HasConstraintName("FK__Cart__subcategor__76969D2E");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -375,12 +377,11 @@ namespace EMart.AccountService.Models
 
             modelBuilder.Entity<TransactionHistory>(entity =>
             {
-                entity.HasIndex(e => e.TransactionId)
-                    .HasName("UQ__Transact__55433A6A7D64FE9E")
-                    .IsUnique();
+                entity.HasKey(e => e.TransactionId)
+                    .HasName("PK__Transact__55433A6B5A827DEB");
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(5)
+                entity.Property(e => e.TransactionId)
+                    .HasMaxLength(10)
                     .IsUnicode(false);
 
                 entity.Property(e => e.BuyerId)
@@ -389,8 +390,17 @@ namespace EMart.AccountService.Models
 
                 entity.Property(e => e.DateTime).HasColumnType("datetime");
 
+                entity.Property(e => e.Image)
+                    .HasColumnName("image")
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.ItemId)
                     .HasMaxLength(5)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ItemName)
+                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.NumberOfItems)
@@ -398,16 +408,12 @@ namespace EMart.AccountService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Remarks)
-                    .HasMaxLength(20)
+                entity.Property(e => e.Price)
+                    .HasColumnName("price")
+                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.SellerId)
-                    .HasMaxLength(5)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.TransactionId)
-                    .IsRequired()
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
@@ -419,17 +425,17 @@ namespace EMart.AccountService.Models
                 entity.HasOne(d => d.Buyer)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.BuyerId)
-                    .HasConstraintName("FK__Transacti__Buyer__3C69FB99");
+                    .HasConstraintName("FK__Transacti__Buyer__6FE99F9F");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.ItemId)
-                    .HasConstraintName("FK__Transacti__ItemI__3E52440B");
+                    .HasConstraintName("FK__Transacti__ItemI__71D1E811");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.TransactionHistory)
                     .HasForeignKey(d => d.SellerId)
-                    .HasConstraintName("FK__Transacti__Selle__3D5E1FD2");
+                    .HasConstraintName("FK__Transacti__Selle__70DDC3D8");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -67,8 +67,8 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'registerbuyer',component:RegisterBuyerComponent},
 {path:'registerseller',component:RegistersellerComponent},
-]}
-
+]},
+{path:'',component:HomeComponent}
 
 ];
 

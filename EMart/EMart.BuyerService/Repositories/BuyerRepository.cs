@@ -64,9 +64,14 @@ namespace EMart.BuyerService.Repositories
             _context.SaveChanges();
         }
 
-        public List<Cart> ViewCart()
+        public List<Cart> ViewCart(string bid)
         {
-            return _context.Cart.ToList();
+            return _context.Cart.Where(res => res.BuyerId == bid).ToList();
+        }
+
+        public List<TransactionHistory> PurchaseHistory(string bid)
+        {
+            return _context.TransactionHistory.Where(res => res.BuyerId == bid).ToList();
         }
     }
 }

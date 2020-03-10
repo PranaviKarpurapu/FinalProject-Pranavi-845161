@@ -13,11 +13,12 @@ import { Items } from 'src/app/Model/items';
 export class ViewCartComponent implements OnInit {
 item:Items
 viewForm:FormGroup;
+buyerid:string;
 cart:Cart;
 cartlist:Cart[];
   constructor(private builder:FormBuilder,private service:BuyerService,private route:Router) { 
-
-    this.service.ViewCart().subscribe(res=>
+this.buyerid= localStorage.getItem('buyerId');
+    this.service.ViewCart(this.buyerid).subscribe(res=>
       {
         this.cart=res;
         console.log(this.cart)

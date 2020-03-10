@@ -26,6 +26,8 @@ namespace EMart.BuyerService.Repositories
 
        public void Deletefromcart(string cartid);
 
-        List<Cart> ViewCart();
+        List<Cart> ViewCart(string bid);
+
+        List<TransactionHistory> PurchaseHistory(string bid);
     }
 }
