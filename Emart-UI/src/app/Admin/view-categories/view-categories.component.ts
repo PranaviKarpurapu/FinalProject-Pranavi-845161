@@ -87,6 +87,8 @@ export class ViewCategoriesComponent implements OnInit {
     this.service.EditCategories(catobj).subscribe(res=>{
         this.category=res;
         console.log(this.category);
+        alert("Record Updated");
+        this.route.navigateByUrl('/admin/view-categories');
         this.View();
          
   })
@@ -101,7 +103,7 @@ export class ViewCategoriesComponent implements OnInit {
     res=>
     {
       console.log('Record Deleted');
-      alert("Do u want to delete");
+      alert("Are you Sure? ");
       alert("Record Deleted");
       this.route.navigateByUrl('/admin/view-categories');
     

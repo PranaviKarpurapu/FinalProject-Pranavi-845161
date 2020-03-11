@@ -89,6 +89,8 @@ viewsubcategoryList:SubCategory[];
       this.service.EditSubCategories(catobj).subscribe(res=>{
           this.viewsubcategory=res;
           console.log(this.viewsubcategory);
+          alert("Record Updated");
+        this.route.navigateByUrl('/admin/view-sub-categories');
         
     })
     this.View();

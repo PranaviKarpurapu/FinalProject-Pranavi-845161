@@ -1,9 +1,4 @@
-.custom-file-label
-{
-    width: 250px;
-    float: right;
-    padding-right: 14px 12px;
-}
+
 * {box-sizing: border-box;}
 
 .topnav {
@@ -128,9 +123,9 @@ button {
 } 
 /* set a hover effect for the button*/ 
   
-button:hover { 
+/* button:hover { 
     opacity: 0.8; 
-} 
+}  */
 /*set extra style for the cancel button*/ 
   
 .cancelbtn { 
@@ -177,7 +172,7 @@ span
   float:right;
 }
 .jumbotron{
-  width : 500px;
+  width : 400px;
 
   /* background-image: url("src/assets/image/log.jpg"); */
   position:relative;

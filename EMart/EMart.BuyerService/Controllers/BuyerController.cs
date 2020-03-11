@@ -85,21 +85,21 @@ namespace EMart.BuyerService.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("TransactionHistory/{bid}")]
+        [HttpGet]
+        [Route("TransactionHistory/{bid}")]
 
-        //public IActionResult TransactionHistory(string bid)
-        //{
-        //    try
-        //    {
-        //        return Ok(_brepo.TransactionHistory(bid));
-        //    }
+        public IActionResult TransactionHistory(string bid)
+        {
+            try
+            {
+                return Ok(_brepo.TransactionHistory(bid));
+            }
 
-        //    catch(Exception ex)
-        //    {
-        //        return NotFound(ex.Message);
-        //    }
-        //}
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
 
         [HttpGet]
@@ -148,7 +148,7 @@ namespace EMart.BuyerService.Controllers
 
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
 
@@ -183,19 +183,19 @@ namespace EMart.BuyerService.Controllers
         }
 
 
-        [HttpGet]
-        [Route("PurchaseHistory/{bid}")]
-        public IActionResult PurchaseHistory(string bid)
-        {
-            try
-            {
+        //[HttpGet]
+        //[Route("PurchaseHistory/{bid}")]
+        //public IActionResult PurchaseHistory(string bid)
+        //{
+        //    try
+        //    {
 
-                return Ok(_brepo.PurchaseHistory(bid));
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.InnerException.Message);
-            }
-        }
+        //        return Ok(_brepo.PurchaseHistory(bid));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return NotFound(ex.InnerException.Message);
+        //    }
+        //}
     }
 }

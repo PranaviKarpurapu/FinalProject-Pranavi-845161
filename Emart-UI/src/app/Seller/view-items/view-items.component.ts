@@ -18,7 +18,7 @@ export class ViewItemsComponent implements OnInit {
 //   categorylist:Category[];
 // subcategorylist:SubCategory[];
 //catid:string;
-  constructor(private fromBuilder:FormBuilder,private service: SellerService)
+  constructor(private fromBuilder:FormBuilder,private route:Router,private service: SellerService)
    {
     this.service.ViewItems().subscribe(res=>{
       this.itemlist=res;
@@ -42,7 +42,7 @@ export class ViewItemsComponent implements OnInit {
         StockNumber:['',Validators.required],
         Remarks:[''],
         SubcategoryId:[''],
-     
+        image:['']
       
   
     });
@@ -59,6 +59,9 @@ DeleteItem(itemId:string)
     res=>
     {
       console.log('Record Deleted');
+      alert("Record Deleted");
+      this.route.navigateByUrl('/seller/view-items');
+      
     },
     err=>
     {
@@ -81,7 +84,7 @@ GetItem(itemid:string)
              
               ItemId:this.item.itemId,
               ItemName:this.item.itemName,
-              
+              image:this.item.image,
               Price:this.item.price,
               Description:this.item.description,
               StockNumber:this.item.stockNumber,
@@ -112,12 +115,17 @@ GetItem(itemid:string)
     item.sellerId=this.itemForm.value["SellerId"];
     item.subcategoryId=this.itemForm.value["SubcategoryId"]
     item.itemName=this.itemForm.value["ItemName"];
-
+    item.image=this.itemForm.value["image"];
     item.price=this.itemForm.value["Price"];
     item.stockNumber=this.itemForm.value["StockNumber"];
      item.description=this.itemForm.value["Description"];
     item.remarks=this.itemForm.value["Remarks"];
-this.service.UpdateItem(item).subscribe(res=>{console.log('Record updated')})
+  this.service.UpdateItem(item).subscribe(res=>
+  {
+    console.log('Record updated')
+    alert("Record Updated");
+    this.route.navigateByUrl('/seller/view-items');
+  })
     console.log(this.item);
    }
 

@@ -63,6 +63,8 @@ export class BuyerService {
      return this.http.get<Buyer>(this.url+'ViewProfile/'+id,Requestheaders)
    }
 
+   
+
 }
 
 

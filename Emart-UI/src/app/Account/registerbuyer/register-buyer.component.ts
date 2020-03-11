@@ -20,8 +20,8 @@ export class RegisterBuyerComponent implements OnInit {
   ngOnInit() {
     this.registerForm=this.fromBuilder.group({
      
-      BuyerId:['',[Validators.required,Validators.maxLength(5)]],
-      UserName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{6,15}$')]],
+      // BuyerId:['',[Validators.required,Validators.maxLength(5)]],
+      UserName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,15}$')]],
       MobileNo:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
       EmailId:['',[Validators.required,Validators.email]],
       Password:['',[Validators.required,Validators.minLength(6)]],
@@ -59,7 +59,7 @@ export class RegisterBuyerComponent implements OnInit {
     {
 
       this.buyer=new Buyer();
-      this.buyer.buyerId=this.registerForm.value["BuyerId"];
+      this.buyer.buyerId='B'+Math.floor(Math.random()*1000);
       this.buyer.userName=this.registerForm.value["UserName"];
       this.buyer.mobileNo=(this.registerForm.value["MobileNo"]);
       this.buyer.password=this.registerForm.value["Password"];
@@ -70,6 +70,7 @@ export class RegisterBuyerComponent implements OnInit {
         res=>
         {
           console.log('Record Added');
+          alert("Details Registered");
         },
         err=>
         {

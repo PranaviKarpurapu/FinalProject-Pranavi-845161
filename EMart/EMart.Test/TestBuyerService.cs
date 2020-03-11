@@ -106,7 +106,7 @@ namespace EMart.Test
                 Itemname = "Redmi",
                 Price = "I853",
                 Description = "Black in color",
-                Remarks = "Fast in charging",
+               
                 Image = "electronic2.jpg"
             });
 
@@ -118,7 +118,7 @@ namespace EMart.Test
         [Description("Test Deletefromcart()")]
         public void TestDeletefromcart()
         {
-            _brepo.Deletefromcart("CT2");
+            _brepo.Deletefromcart("9");
             var result = _brepo.ViewCart("5");
 
             Assert.IsNotNull(result);

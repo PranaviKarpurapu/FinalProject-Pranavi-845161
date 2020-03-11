@@ -30,7 +30,7 @@ export class RegistersellerComponent implements OnInit {
       GSTIN :['',Validators.required],
       Website:['',[Validators.required,Validators.maxLength(25)]],
       CompanyName:['',[Validators.required,Validators.maxLength(30)]],
-      BriefDetails:['',[Validators.required,Validators.maxLength(70)]],
+      BriefDetails:[''],
       // acceptTerms:[false,Validators.requiredTrue]
     
     });
@@ -65,7 +65,7 @@ export class RegistersellerComponent implements OnInit {
     {
 
       this.seller=new Seller();
-      this.seller.sellerId=this.registerForm.value["SellerId"];
+      this.seller.sellerId='S'+Math.floor(Math.random()*1000);
       this.seller.userName=this.registerForm.value["UserName"];
       this.seller.mobileNo=(this.registerForm.value["MobileNo"]);
       this.seller.emailId=this.registerForm.value["EmailId"];
@@ -80,6 +80,7 @@ export class RegistersellerComponent implements OnInit {
         res=>
         {
           console.log('Record Added');
+          alert("Details Registered");
         },
         err=>
         {

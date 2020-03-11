@@ -28,6 +28,6 @@ namespace EMart.BuyerService.Repositories
 
         List<Cart> ViewCart(string bid);
 
-        List<TransactionHistory> PurchaseHistory(string bid);
+        //List<TransactionHistory> PurchaseHistory(string bid);
     }
 }

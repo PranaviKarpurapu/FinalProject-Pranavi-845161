@@ -16,6 +16,7 @@ export class PurchaseHistoryComponent implements OnInit {
   constructor(private builder:FormBuilder,private service:BuyerService,private route:Router)
    { 
     this.buyerid= localStorage.getItem('buyerId');
+    
     this.service.TransactionHistory(this.buyerid).subscribe(res=>
       {
         this.transobj=res;

@@ -14,7 +14,6 @@ namespace EMart.BuyerService.Models
         public string Itemname { get; set; }
         public string Price { get; set; }
         public string Description { get; set; }
-        public string Remarks { get; set; }
         public string Image { get; set; }
 
         public virtual Buyer Buyer { get; set; }

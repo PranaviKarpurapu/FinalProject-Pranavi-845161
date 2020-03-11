@@ -41,7 +41,7 @@ selectedFile : File = null;
     SellerId:['',[Validators.required]], 
       ItemName:['',[Validators.required,Validators.pattern('^[a-zA-Z]{3,15}$')]],
      Price:['',[Validators.required]],
-      Description:['',Validators.required],
+      Description:[''],
       CategoryId:[''],
       CategoryName:[''],
       StockNumber:['',Validators.required],
@@ -70,7 +70,7 @@ get f()
     //display from values on sucess
     if(this.itemForm.valid)
     {
-      alert('sucess!!!!!!')
+      alert('Item Added')
       console.log(JSON.stringify(this.itemForm.value));
     }
     this.Add();
@@ -103,7 +103,7 @@ get f()
 
       this.item=new Items();
       this.item.itemId='I'+Math.floor(Math.random()*1000);
-      this.item.sellerId=this.itemForm.value["SellerId"];
+      this.item.sellerId=localStorage.getItem('sellerid');
       this.item.itemName=this.itemForm.value["ItemName"];
       this.item.categoryId=(this.itemForm.value["CategoryName"]);
       this.item.subcategoryId=(this.itemForm.value["SubcategoryName"]);
@@ -119,6 +119,8 @@ get f()
         {
           console.log(this.item)
           console.log('Record Added');
+          alert("Item Added");
+          this.route.navigateByUrl('/seller/view-items');
         },
         err=>
         {
