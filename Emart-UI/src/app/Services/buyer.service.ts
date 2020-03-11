@@ -48,7 +48,7 @@ export class BuyerService {
     return this.http.delete<Cart>(this.url+'Deletefromcart/'+cartid,Requestheaders);
    }
 
-   public PurchaseHistory(buyerid:string) :Observable<TransactionHistory>
+   public TransactionHistory(buyerid:string) :Observable<TransactionHistory>
   {
     return this.http.get<TransactionHistory>(this.url+'TransactionHistory/'+buyerid,Requestheaders);
    }

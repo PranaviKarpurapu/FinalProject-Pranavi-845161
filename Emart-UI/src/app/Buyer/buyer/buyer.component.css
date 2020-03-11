@@ -3,10 +3,7 @@
 
 * {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .topnav {
   overflow: hidden;
@@ -125,4 +122,11 @@ body {
       text-align: center;
       float: none;
     }
+  }
+
+  .b1{
+    background-image: url("src/assets/image/h.jpg");
+   background-size: cover;
+   height:600px;
+   position:relative;
   }
