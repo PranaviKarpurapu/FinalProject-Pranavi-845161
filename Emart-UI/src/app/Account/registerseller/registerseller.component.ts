@@ -49,7 +49,7 @@ export class RegistersellerComponent implements OnInit {
     //display from values on sucess
     if(this.registerForm.valid)
     {
-      alert('sucess!!!!!!')
+      // alert('sucess!!!!!!')
       console.log(JSON.stringify(this.registerForm.value));
       this.Register();
     }

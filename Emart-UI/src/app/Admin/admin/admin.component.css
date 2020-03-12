@@ -2,15 +2,15 @@
 
 .topnav {
   overflow: hidden;
-  background-color:lightgray;
+  background-color:black;
   padding: 2px 8px;
   width:100%;
 }
-
+        
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: goldenrod;
   text-align: center;
   padding: 10px 14px;
   text-decoration: none;
@@ -18,13 +18,13 @@
 }
 
 .topnav a:hover {
-  background-color:lightskyblue;
-  color: black;
+  background-color:white;
+  color: goldenrod;
 }
 
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
+  background-color: bisque;
+  color: goldenrod;
 }
 
 .topnav .search-container {
@@ -122,9 +122,7 @@ button {
 } 
 /* set a hover effect for the button*/ 
   
-button:hover { 
-    opacity: 0.8; 
-} 
+
 /*set extra style for the cancel button*/ 
   
 .cancelbtn { 
@@ -170,13 +168,13 @@ span
 {
   float:right;
 }
-.jumbotron{
+/* .jumbotron{
   width : 350px;
   /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOUqwOWCEmM6CPSnlA94mnHv3f7SWoDr6NF_wWZhQwzFfFtWQg"); */
-  position:relative;
+  /* position:relative;
   background-size: cover;
   
-}
+}  */
 h4{
   text-align: CENTER;
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -184,11 +182,11 @@ h4{
 }
 
 .b1{
-  /* background-image: url("src/assets/image/f.jpg"); */
+  background-image: url("src/assets/image/bbb.jpg"); 
  background-size: cover;
  height:620px;
  position:relative;
- margin-left: 60px;
+
 }
 .round-shape {
   border-radius: 50%;

@@ -8,7 +8,7 @@ body {
 
 .topnav {
   overflow:hidden;
-  background-color: #e9e9e9;
+  background-color: #dffae5;
 }
 
 .topnav a {
@@ -22,13 +22,13 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(182, 241, 163);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
+  background-color:  rgb(182, 241, 163);
+  color: black;
 }
 
 .topnav .search-container {
@@ -125,7 +125,7 @@ body {
     }
   }
   .home{
-     background-image: url("src/assets/image/f.jpg");  
+     background-image: url("src/assets/image/home.jpg");  
     background-size: cover;
     height:620px;
     position: relative;

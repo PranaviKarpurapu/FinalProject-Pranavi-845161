@@ -20,7 +20,9 @@ export class PurchaseHistoryComponent implements OnInit {
     this.service.TransactionHistory(this.buyerid).subscribe(res=>
       {
         this.transobj=res;
-        console.log(this.transobj)
+        console.log(this.transobj);
+        
+        
       },
       err=>{
         console.log(err);

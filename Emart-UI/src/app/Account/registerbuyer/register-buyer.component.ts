@@ -43,10 +43,11 @@ export class RegisterBuyerComponent implements OnInit {
     //display from values on sucess
     if(this.registerForm.valid)
     {
-      alert('sucess!!!!!!')
+      // alert('sucess!!!!!!')
+      this.Register();
       console.log(JSON.stringify(this.registerForm.value));
     }
-    this.Register();
+    
   }
     onReset()
     {

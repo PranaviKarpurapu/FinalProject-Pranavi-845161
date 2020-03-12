@@ -52,13 +52,26 @@
       
 
 
-  <div class="text-center">
+            <div class="text-center">
 
-      <button  type="submit" >Register</button>
-      <button  type="reset" (click)="onReset()" >Reset</button>
-      
-  </div>
+                <button  type="submit" >Register</button>
+                <!-- <button  type="reset" (click)="onReset()" >Reset</button> -->
+                
+            </div>
+        
+            <div class="text-center">
 
+                <!-- <button  type="submit" >Register</button> -->
+                <button  type="reset" (click)="onReset()" >Reset</button>
+                
+            </div>
+        
+
+
+  <div class="text-center" > 
+    <a [routerLink]="['/home/login']"> Go Back </a>
+       
+</div>
 
   
   </form>

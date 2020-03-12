@@ -2,7 +2,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color:lightgray;
+  background-color:black;
   padding: 2px 8px;
   width:100%;
 }
@@ -110,8 +110,8 @@ input[type=password] {
 /*set a style for the buttons*/ 
   
 button { 
-    background-color:lightslategray; 
-    color: white; 
+    background-color:black; 
+    color: goldenrod; 
     size: 20px; 
     padding: 8px 12px; 
     margin: 8px 0; 
@@ -122,9 +122,7 @@ button {
 } 
 /* set a hover effect for the button*/ 
   
-button:hover { 
-    opacity: 0.8; 
-} 
+
 /*set extra style for the cancel button*/ 
   
 .cancelbtn { 
@@ -171,17 +169,18 @@ span
   float:right;
 }
 .jumbotron{
-  width : 500px;
+  width : 400px;
 
-  /* background-image: url("src/assets/image/log.jpg"); */
+   background-image: url("src/assets/image/formm.jpg"); 
   position:relative;
   background-size: cover;
   
 }
 h4{
   text-align: CENTER;
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #2196F3;
+ /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  color: white;
+  font-weight: bolder;
 }
 
 
@@ -191,4 +190,8 @@ h4{
   height: 100%
 }
 
+label
+{
+  color:white;
+}
 

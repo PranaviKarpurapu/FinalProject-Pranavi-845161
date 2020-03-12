@@ -13,14 +13,14 @@
 .topnav a {
   float: left;
   display: block;
-  color:bisque;
+  color:white;
   text-align: center;
   padding: 10px 14px;
   text-decoration: none;
   font-size: 17px;
 }
 .topnav a:hover {
-  background-color: bisque;
+  background-color: white;
   color: black;
 }
 
@@ -172,7 +172,7 @@ span
   float:right;
 }
 .jumbotron{
-  width : 300px;
+  width : 290px;
   background-image: url("src\assets\image\log (1).jpg");
   position:relative;
   background-size: cover;
@@ -184,8 +184,8 @@ h4{
 }
 
 .b1{
-  background-image: url("src/assets/image/f.jpg");
+  background-image: url("src/assets/image/mm.jpg");
  background-size: cover;
- height:630px;
+ height:690px;
  position:relative;
 }

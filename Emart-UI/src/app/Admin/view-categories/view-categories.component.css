@@ -1,0 +1,33 @@
+.view{
+    width : 500px;
+  
+    background-image: url("src\assets\image\image.jpg");
+    position:relative;
+    background-size: cover;
+    color:white;
+    border-radius: 20px;
+
+    
+  }
+
+  .table
+  {
+color:white;
+  }
+
+  td button { 
+    background-color:black; 
+    color: goldenrod; 
+    size: 20px; 
+    /* padding: 4px 8px;  */
+    /* margin: 4px 0;  */
+    border: none; 
+    /* cursor: pointer;  */
+    width: 100%; 
+    border-radius: 50px;
+} 
+
+.container
+{
+    background-color: transparent;
+}

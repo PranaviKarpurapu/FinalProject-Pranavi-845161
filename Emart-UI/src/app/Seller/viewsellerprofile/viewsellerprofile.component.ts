@@ -108,6 +108,8 @@ EditProfile()
   this.service.EditProfile(this.seller).subscribe(res=>
     {
       console.log('Record Updated');
+      alert("Record Updated");
+      
     })
 }
 

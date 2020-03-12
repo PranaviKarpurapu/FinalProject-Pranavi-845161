@@ -17,6 +17,7 @@ buyer:Buyer;
  
   constructor(private fromBuilder:FormBuilder,private service:BuyerService) {
     let sid= localStorage.getItem('buyerId')
+    console.log(sid);
  this.service.ViewProfile(sid).subscribe(res=>
   {
     this.buyer=res;
@@ -95,13 +96,13 @@ EditProfile()
 {
   this.buyer=new Buyer();
   console.log(this.buyer);
-  this.buyer.buyerId=localStorage.getItem('buyerid');
+  this.buyer.buyerId=localStorage.getItem('buyerId');
   this.buyer.userName=this.itemForm.value["userName"];
   this.buyer.password=this.itemForm.value["password"];
   this.buyer.emailId=this.itemForm.value["emailId"];
   this.buyer.mobileNo=this.itemForm.value["mobileNo"];
 
-
+this.buyer.createdDateTime=new Date();
   
 // this.item.createdDateTime=this.itemForm.value["createdDateTime"];
 
@@ -109,7 +110,14 @@ EditProfile()
   this.service.EditProfile(this.buyer).subscribe(res=>
     {
       console.log('Record Updated');
+      alert('Updated Successfully');
     })
 }
 }
+
+
+
+
+
+
 

@@ -46,6 +46,7 @@ this.buyerid= localStorage.getItem('buyerId');
       res=>{
       console.log("Deleted from cart");
       alert('Deleted from cart');
+      this.route.navigateByUrl('/buyer');
     },
     err=>
     {

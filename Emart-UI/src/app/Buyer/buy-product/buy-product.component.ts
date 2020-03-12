@@ -35,37 +35,31 @@ export class BuyProductComponent implements OnInit {
   {
     this.pobj=new TransactionHistory();
     this.pobj.transactionId='T'+Math.round(Math.random()*999);
+    
     this.pobj.buyerId=localStorage.getItem('buyerId');
     this.pobj.sellerId=this.item.sellerId;
     this.pobj.numberOfItems=this.buyerform.value["numberOfItems"];
     this.pobj.itemId=this.item.itemId;
-    this.pobj.itemname=this.pobj.itemname;
-    this.pobj.image=this.item.image;
     this.pobj.transactionType=this.buyerform.value["transactionType"]
        this.pobj.dateTime=this.buyerform.value["dateTime"];
        this.pobj.remarks=this.buyerform.value["remarks"];
-
        console.log(this.pobj);
        this.service.BuyItem(this.pobj).subscribe(res=>{
          console.log("Purchase was Sucessfull");
          alert('Purchase Done Successfully');
+         this.route.navigateByUrl('/buyer');
        })
   
   }
     
   
   }
-  
-
-
-//   numberofitems:number=1;
-
 //   transForm:FormGroup;
 //   transactionhistory:TransactionHistory;
 //   itemlist:Items[];
 //   item:Items
 //   submitted: boolean;
- 
+//  numberofitems:any
 //   constructor(private formbuilder:FormBuilder,private service:BuyerService) { }
 
 //   ngOnInit() {
@@ -75,12 +69,9 @@ export class BuyProductComponent implements OnInit {
 //   console.log(this.item.itemId);
 //   this.transForm=this.formbuilder.group({
      
-//     transactiontype:['',[Validators.required]],
-//     cardNumber:['',[Validators.required]],
-//     cvv:['',[Validators.required]],
-//     edate:[''],
-//     name:['',[Validators.required]], 
+      
 //     numberofitems:['',Validators.required],
+//     transactiontype:['',Validators.required],
     
 
   
@@ -89,28 +80,21 @@ export class BuyProductComponent implements OnInit {
 
 //   }
 
-//   get f()
-//   {
-//     return this.transForm.controls;
-
-//   }
-
 //   onSubmit()
 // {
-//   this.item=JSON.parse(localStorage.getItem('item'));
-//   console.log(this.item);
-//     console.log(this.item.itemId);  
-//     console.log(this.transactionhistory);    
 
-//   console.log(JSON.stringify(this.transForm.value));
 
 //   this.submitted=true;
-//   //display from values on success
+//   //display from values on sucess
 //   if(this.transForm.valid)
 //   {
 //     alert('sucess!!!!!!')
- 
-    
+//     this.item=JSON.parse(localStorage.getItem('item'));
+//     console.log(this.item);
+//       console.log(this.item.itemId);  
+//       console.log(this.transactionhistory);    
+
+//     console.log(JSON.stringify(this.transForm.value));
  
 //   this.transactionhistory=new TransactionHistory();
 //   this.transactionhistory.id='I'+Math.round(Math.random()*999);
@@ -130,8 +114,11 @@ export class BuyProductComponent implements OnInit {
 //        console.log("Transaction is Successfull");
 //        alert('Ordered Successfully');
 //      })
-//     }
-//     }
+
+//     } 
+
+
+// }
 
 // incrementQty()
 // {
@@ -153,4 +140,5 @@ export class BuyProductComponent implements OnInit {
 //  }
 
 
-// }
+
+

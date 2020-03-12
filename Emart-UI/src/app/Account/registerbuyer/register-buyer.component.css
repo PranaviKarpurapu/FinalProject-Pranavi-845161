@@ -15,8 +15,8 @@ input[type=password] {
 /*set a style for the buttons*/ 
   
 button { 
-    background-color:lightslategray; 
-    color: white; 
+    background-color:rgb(243, 244, 245); 
+    color: black; 
     size: 20px; 
     padding: 8px 12px; 
     margin: 8px 0; 
@@ -63,20 +63,24 @@ span
   float:right;
 }
 .jumbotron{
-  width : 450px;
+  width : 400px;
 
-  background-image: url("src\assets\image\log (1).jpg");
+  background-image: url("src\assets\image\form.jpg");
   position:relative;
   background-size: cover;
   
 }
+
 h4{
   text-align: CENTER;
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #2196F3;
+  color: white;
 }
 
 
-
+a
+{
+color:black;
+}
 
 

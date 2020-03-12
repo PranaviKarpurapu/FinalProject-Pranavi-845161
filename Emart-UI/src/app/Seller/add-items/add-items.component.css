@@ -173,8 +173,10 @@ span
 }
 .jumbotron{
   width : 400px;
-
-  /* background-image: url("src/assets/image/log.jpg"); */
+  background: -webkit-linear-gradient(rgb(167, 231, 194), rgb(156, 238, 187));
+  background: linear-gradient(rgb(163, 230, 184), rgb(184, 221, 193));
+  
+  /* background-image: url("src/assets/image/log.jpg");  */
   position:relative;
   background-size: cover;
   
