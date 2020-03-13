@@ -173,7 +173,7 @@ span
 }
 .jumbotron{
   width : 290px;
-  background-image: url("src\assets\image\log (1).jpg");
+  /* background-image: url("src\assets\image\log (1).jpg"); */
   position:relative;
   background-size: cover;
 }

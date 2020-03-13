@@ -68,7 +68,7 @@ export class AddCategoryComponent implements OnInit {
         res=>
         {
           console.log('Record Added');
-           this.route.navigateByUrl('/admin/view-categories');
+          //  this.route.navigateByUrl('/admin/view-categories');
         },
         err=>
         {

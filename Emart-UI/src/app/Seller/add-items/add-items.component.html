@@ -45,7 +45,7 @@
       <input type="text" formControlName="ItemName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ItemName.errors }" />
       <div *ngIf="submitted && f.ItemName.errors" class="invalid-feedback">
           <div *ngIf="f.ItemName.errors.required"> Name is required</div>
-          <div *ngIf="f.ItemName.errors.pattern">Enter Atleast 6 Alphabets</div>
+          <div *ngIf="f.ItemName.errors.pattern">Enter minimum length of Alphabets</div>
       </div>
   </div>
   </td>
@@ -84,7 +84,7 @@
       <input type="text" formControlName="Price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Price.errors }" />
       <div *ngIf="submitted && f.Price.errors" class="invalid-feedback">
           <div *ngIf="f.Price.errors.required">Price is required</div>
-          <div *ngIf="f.Price.errors.minlength">Price must be at least 6 characters</div>
+          <div *ngIf="f.Price.errors.pattern">Price must be in number</div>
       </div>
     </div>
     

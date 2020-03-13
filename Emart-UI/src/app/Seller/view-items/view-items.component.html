@@ -2,7 +2,7 @@
 <br>
 <br>
 <form [formGroup]="itemForm" >
-  <div class="container py-5">  
+  <div class="container py-5" id="form">  
     <h3 class="text-center text-uppercase">List of Items</h3>  
     <table class="table table-bordered table-striped">  
         <thead>  
@@ -24,7 +24,7 @@
           <tr *ngFor="let item of itemlist"> 
             
             <td>{{item.itemName}}</td> 
-            <td>{{item.image}}</td> 
+    <td><img class="card-img " id="i1" src="assets/image/{{item.image}}" alt="Card image cap" > </td>
             <td>{{item.description}}</td>
             <td>{{item.price}}</td>  
               

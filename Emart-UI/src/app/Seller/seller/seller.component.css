@@ -8,7 +8,10 @@ body {
 
 .topnav {
   overflow:hidden;
-  background-color: #dffae5;
+  background-color: #8ff1a6;
+  /* background-color: -webkit-linear-gradient(rgb(18, 223, 104), rgb(13, 14, 13));
+      background-color: linear-gradient(rgb(13, 15, 14), rgb(18, 180, 59));
+       */
 }
 
 .topnav a {
@@ -127,6 +130,6 @@ body {
   .home{
      background-image: url("src/assets/image/home.jpg");  
     background-size: cover;
-    height:620px;
+    height:640px;
     position: relative;
   }
