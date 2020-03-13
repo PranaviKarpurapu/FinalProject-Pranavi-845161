@@ -145,7 +145,7 @@ input {
     
     .overlay {
     background: -webkit-linear-gradient(rgb(8, 1, 1), rgb(8, 1, 14));
-    background: linear-gradient(rgb(2, 6, 14), rgb(8, 8, 8));
+    background: linear-gradient(rgb(112, 112, 112), rgb(8, 8, 8));
     opacity: 0.85;
     filter: alpha(opacity=85);
     height: 100%;

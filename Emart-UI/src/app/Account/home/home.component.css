@@ -5,6 +5,9 @@
 .topnav {
   overflow: hidden;
   background-color:black;
+  /* background: -webkit-linear-gradient(rgb(8, 1, 1), rgb(8, 1, 14));
+background: linear-gradient(rgb(50, 35, 250), rgb(243, 238, 238)); */
+
   padding: 2px 8px;
   width: 100%;
 }
@@ -25,8 +28,8 @@
 }
 
 .topnav a.active {
- background-color: #2196F3;
-  color: bisque;
+ background-color: rgb(249, 249, 250);
+  color: rgb(20, 20, 19);
 }
 
 .topnav .search-container {

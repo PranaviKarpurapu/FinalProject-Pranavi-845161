@@ -1,5 +1,8 @@
 table
 {
 background-color: rgb(24, 22, 20);
+background: -webkit-linear-gradient(rgb(8, 1, 1), rgb(8, 1, 14));
+background: linear-gradient(rgb(112, 112, 112), rgb(8, 8, 8));
 color: white;
 }
+

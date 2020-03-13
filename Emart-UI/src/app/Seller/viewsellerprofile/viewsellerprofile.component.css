@@ -168,7 +168,7 @@ input {
     background-size:cover;
     }
 .container{
-  width:130%;
+  width:150%;
   color: black;
 }
     @media (max-width: 500px) {
