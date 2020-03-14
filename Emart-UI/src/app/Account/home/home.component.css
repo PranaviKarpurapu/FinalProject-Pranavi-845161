@@ -5,8 +5,8 @@
 .topnav {
   overflow: hidden;
   background-color:black;
-  /* background: -webkit-linear-gradient(rgb(8, 1, 1), rgb(8, 1, 14));
-background: linear-gradient(rgb(50, 35, 250), rgb(243, 238, 238)); */
+  background: -webkit-linear-gradient(rgb(241, 220, 220), rgb(245, 237, 251));
+background: linear-gradient(rgb(10, 10, 10), rgb(12, 12, 12)); 
 
   padding: 2px 8px;
   width: 100%;

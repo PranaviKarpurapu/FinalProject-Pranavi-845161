@@ -10,5 +10,6 @@ export class TransactionHistory
     remarks:string;
     transactionType:string;
     image:string;
-    itemname:string;
+    itemName:string;
+    price:string;
 }
