@@ -131,8 +131,8 @@ E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Micros
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\obj\Debug\netcoreapp3.1\EMart.SellerService.MvcApplicationPartsAssemblyInfo.cs
-E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\obj\Debug\netcoreapp3.1\EMart.SellerService.MvcApplicationPartsAssemblyInfo.cache
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\obj\Debug\netcoreapp3.1\EMart.SellerService.MvcApplicationPartsAssemblyInfo.cs
+E:\FINAL-PROJECT-845161\EMart\EMart.SellerService\obj\Debug\netcoreapp3.1\EMart.SellerService.MvcApplicationPartsAssemblyInfo.cache

@@ -31,7 +31,7 @@ namespace EMart.Test
                 UserName = "Rishika",
                 Password = "ranirishi",
 
-                EmailId = "rishika@gmail.com",
+                EmailId = "rishi@gmail.com",
                 MobileNo = "9985643876",
                 CompanyName = "Rishi Says",
                 Gstin = "JX691B",
@@ -52,18 +52,18 @@ namespace EMart.Test
             _irepo.AddItem(new Items()
             {
                 SellerId = "1",
-                ItemId = "I074",
+                ItemId = "I95",
                 CategoryId = "1",
                 SubcategoryId = "SC38",
                 Price = "900",
-                ItemName = "Camera",
+                ItemName = "DFg",
                 Image = "electronic7",
                 Description = "HD Quality",
                 StockNumber = "60",
                 Remarks="Good"
             }
            );
-            var result = _irepo.GetItem("I074");
+            var result = _irepo.GetItem("I95");
 
             Assert.IsNotNull(result);
         }
@@ -84,8 +84,8 @@ namespace EMart.Test
         public void TestDeleteItem()
         {
 
-            _irepo.DeleteItem("I853");
-            var result = _irepo.GetItem("I853");
+            _irepo.DeleteItem("I95");
+            var result = _irepo.GetItem("I95");
             Assert.IsNull(result);
         }
 
@@ -103,7 +103,7 @@ namespace EMart.Test
                 Price = "800",
                 ItemName = "Camera",
                 Image = "electronic7",
-                Description = "HD Quality",
+                Description = "Good Quality",
                 StockNumber = "70",
                 Remarks = "Good"
             }

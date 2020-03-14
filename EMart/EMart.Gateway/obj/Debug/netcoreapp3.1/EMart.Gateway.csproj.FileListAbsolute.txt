@@ -56,5 +56,3 @@ E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\bin\Debug\netcoreapp3.1\Microsoft.Ex
 E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\bin\Debug\netcoreapp3.1\Ocelot.dll
-E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\obj\Debug\netcoreapp3.1\EMart.Gateway.MvcApplicationPartsAssemblyInfo.cs
-E:\FINAL-PROJECT-845161\EMart\EMart.Gateway\obj\Debug\netcoreapp3.1\EMart.Gateway.MvcApplicationPartsAssemblyInfo.cache

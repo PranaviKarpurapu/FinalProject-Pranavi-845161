@@ -25,12 +25,12 @@ namespace EMart.Test
         {
             _adrepo.AddCategories(new Category()
             {
-                CategoryId="C571",
-                CategoryName="Book",
-                BriefDetails="Types of Books"
+                CategoryId="C604",
+                CategoryName="Bag",
+                BriefDetails="Different types"
             });
 
-            var result = _adrepo.GetCatById("C571");
+            var result = _adrepo.GetCatById("C604");
             Assert.IsNotNull(result);
         }
 
@@ -40,14 +40,14 @@ namespace EMart.Test
         {
             _adrepo.AddSubCategories(new SubCategory()
             {
-                SubcategoryId = "SC571",
-                SubcategoryName = "Book",
-                CategoryId="C571",
-                BriefDetails = "Types of Books",
-                Gst="HW74B9"
+                SubcategoryId = "SC579",
+                SubcategoryName = "Schools Bags",
+                CategoryId="C694",
+                BriefDetails = "Different Colors",
+                Gst="56VDFG"
             });
 
-            var result = _adrepo.GetSubCatById("SC571");
+            var result = _adrepo.GetSubCatById("SC579");
             Assert.IsNotNull(result);
         }
 
@@ -81,12 +81,12 @@ namespace EMart.Test
         {
             _adrepo.EditCategories(new Category
             {
-                CategoryId = "C571",
-                CategoryName = "Books",
-                BriefDetails = "Differnt Books"
+                CategoryId = "C694",
+                CategoryName = "Bags",
+                BriefDetails = "Differnt Bags"
             });
 
-            var result = _adrepo.GetCatById("C571");
+            var result = _adrepo.GetCatById("C694");
             Assert.IsNotNull(result);
         }
 
@@ -96,14 +96,14 @@ namespace EMart.Test
         {
             _adrepo.EditSubCategories(new SubCategory
             {
-                SubcategoryId = "SC571",
-                SubcategoryName = "Lepakshi Books",
-                CategoryId = "C571",
-                BriefDetails = "Types of Books",
+                SubcategoryId = "SC579",
+                SubcategoryName = "College Bags",
+                CategoryId = "C694",
+                BriefDetails = "Types of Bags",
                 Gst = "HW74B9"
             });
 
-            var result = _adrepo.GetSubCatById("SC571");
+            var result = _adrepo.GetSubCatById("SC579");
             Assert.IsNotNull(result);
         }
 
@@ -112,9 +112,9 @@ namespace EMart.Test
         [Description("Test DeleteSubCategories()")]
         public void TestDeleteSubCategories()
         {
-            _adrepo.DeleteSubCategories("SC571");
+            _adrepo.DeleteSubCategories("SC570");
 
-            var result = _adrepo.GetSubCatById("SC571");
+            var result = _adrepo.GetSubCatById("SC570");
             Assert.IsNull(result);
         }
 
@@ -122,9 +122,9 @@ namespace EMart.Test
         [Description("Test DeleteCategories()")]
         public void TestDeleteCategories()
         {
-            _adrepo.DeleteCategories("C571");
+            _adrepo.DeleteCategories("C604");
 
-            var result = _adrepo.GetCatById("C571");
+            var result = _adrepo.GetCatById("C604");
             Assert.IsNull(result);
         }
     }

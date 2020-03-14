@@ -35,46 +35,45 @@ namespace EMart.Test
             Assert.IsNotNull(result);
         }
 
-        //[Test]
-        //[Description("Test BuyerRegister()")]
-        //public void TestBuyerRegister()
-        //{
-        //    _acrepo.BuyerRegister(new Buyer()
-        //    {
-        //        BuyerId = "B054",
-        //        UserName = "Lavanya",
-        //        Password="lavanya",
-        //        EmailId="lav@gmail.com",
-        //        MobileNo="9183086775",
-        //        CreatedDateTime=DateTime.Now
-        //    });
+        [Test]
+        [Description("Test BuyerRegister()")]
+        public void TestBuyerRegister()
+        {
+            _acrepo.BuyerRegister(new Buyer()
+            {
+                BuyerId = "B0517",
+                UserName = "Vyshnavi",
+                Password = "vyshnavi",
+                EmailId = "vyshu@gmail.com",
+                MobileNo = "9183087858",
+                CreatedDateTime = DateTime.Now
+            });
 
-        //    var result = _acrepo.BuyerLogin("Lavanya", "lavanya");
-        //    Assert.IsNotNull(result);
-        //}
+            var result = _acrepo.BuyerLogin("Vyshnavi", "vyshnavi");
+            Assert.IsNotNull(result);
+        }
 
-        //[Test]
-        //[Description("Test SellerRegister()")]
-        //public void TestSellerRegister()
-        //{
-        //    _acrepo.SellerRegister(new Seller()
-        //    {
-        //        SellerId="S076",
-        //        UserName="Rishika",
-        //        Password="rani",
+        [Test]
+        [Description("Test SellerRegister()")]
+        public void TestSellerRegister()
+        {
+            _acrepo.SellerRegister(new Seller()
+            {
+                SellerId = "S094",
+                UserName = "Reshma",
+                Password = "reshma",
 
-        //        EmailId="rishi@gmail.com",
-        //        MobileNo="9985643876",
-        //        CompanyName="Rishi Says",
-        //        Gstin="JX691B",
-        //        BriefDetails="Good Products",
-        //        Website="QualityGoods.com",
-        //        PostalAddress="Godavari"
-        //    });
+                EmailId = "reshma@gmail.com",
+                MobileNo = "9985647656",
+                CompanyName = "CraftsGO",
+                Gstin = "H6C5A",
+                BriefDetails = "craftsgo.com",
+                PostalAddress = "Tenali"
+            });
 
-        //    var result = _acrepo.SellerLogin("Rishika", "rani");
-        //    Assert.IsNotNull(result);
-        //}
+            var result = _acrepo.SellerLogin("Reshma", "reshma");
+            Assert.IsNotNull(result);
+        }
 
 
 

@@ -31,17 +31,17 @@ namespace EMart.Test
             _brepo.BuyItem(new TransactionHistory()
             {
                 
-                BuyerId = "B054",
+                BuyerId = "B0517",
                 SellerId = "1",
-                TransactionId = "4",
-                ItemId = "I266",
+                TransactionId = "T045",
+                ItemId = "I86",
                 NumberOfItems = "2",
                 DateTime = DateTime.Now,
-                Remarks = "Good",
-                TransactionType = "Credit Card"
+                //Remarks = "Good",
+                TransactionType = "Debit Card"
             }
            );
-            var result = _brepo.TransactionHistory("B054");
+            var result = _brepo.TransactionHistory("B0517");
 
             Assert.IsNotNull(result);
         }
@@ -54,7 +54,7 @@ namespace EMart.Test
             {
                 BuyerId = "B054",
                 UserName = "Lavanya",
-                Password = "sweety",
+                Password = "lavanya",
                 EmailId = "lav@gmail.com",
                 MobileNo = "9134308675",
                 CreatedDateTime = DateTime.Now
